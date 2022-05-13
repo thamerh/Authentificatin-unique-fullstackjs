@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "node express crud api with sequelize",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thamerh/Add-Edit-Delete-Products-FullStackProject.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "multer"
+  ],
+  "author": "thamer hamdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thamerh/Add-Edit-Delete-Products-FullStackProject/issues"
+  },
+  "homepage": "https://github.com/thamerh/Add-Edit-Delete-Products-FullStackProject#readme"
+}
