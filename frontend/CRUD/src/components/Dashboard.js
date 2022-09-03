@@ -1,8 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
-import { useHistory } from 'react-router-dom';
+import { Link,useHistory} from "react-router-dom";
+import StudentSearchBar from "./StudentSearchBar";
 
 const Dashboard = () => {
     const [name, setName] = useState('');
@@ -41,12 +41,33 @@ const Dashboard = () => {
 
     return (
         <div className="container mt-5">
-            <h1>Welcome Back: {name}</h1>
-            <div className="buttons">
-                                <button onClick={Logout} >
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+  <h1>Welcome : {name}</h1>
+  </div>
+
+  
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        <button onClick={Logout} className="button is-small is-info mr-2">
                                     Log Out
                                 </button>
-                            </div>
+          <Link    to={`AddStudent`}
+                className="button is-small is-info mr-2">
+                Add student
+              </Link>
+        </div>
+      </div>
+    </div>
+ 
+</nav>
+<div className=" mt-5 is-centered w-100" >
+      <div className="column w-100"  >
+        <h1 style={{textAlign:"center",  fontSize: "25px",padding: "10px",color: "rgb(22, 134, 240)",fontFamily: 'Pacifico'}}> students </h1>
+        <span  style={{textAlign:"center"}}><StudentSearchBar/></span>
+      </div>
+    </div>
         </div>
     )
 }
