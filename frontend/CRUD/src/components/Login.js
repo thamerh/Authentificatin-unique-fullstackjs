@@ -17,7 +17,7 @@ const Login = () => {
                 password: password
             });
             // history.push("/dashboard");
-            window.location = "/dashboard";
+            window.location = "/";
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
