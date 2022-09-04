@@ -93,3 +93,22 @@ ALTER TABLE `students`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
+--
+-- Table structure for table `files` 
+--
+CREATE TABLE files(
+   id VARCHAR(50),
+   image VARCHAR(500),
+   title VARCHAR(50) NOT NULL,
+   description VARCHAR(500) NOT NULL,
+   createdAt DATETIME NOT NULL,
+   updatedAt DATETIME NOT NULL,
+   PRIMARY KEY(id)
+);
+
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
