@@ -13,7 +13,8 @@ try {
 } catch (error) {
     console.error(error);
 }
-
+//static Images Folder
+app.use('/Images', express.static('./Images'));
 app.use(cors({ credentials:true, origin:['http://localhost:3000','http://localhost:3001']}));
 app.use(cookieParser());
 app.use(express.json());
